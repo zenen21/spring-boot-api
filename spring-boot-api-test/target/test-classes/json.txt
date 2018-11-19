@@ -1,7 +1,0 @@
-{
-
-"name" : "Spring boot",
-
-"description" : "Quickstart"
-
-}

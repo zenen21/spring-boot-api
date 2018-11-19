@@ -1,9 +1,19 @@
 /target/
 !.mvn/wrapper/maven-wrapper.jar
-/quick-start-test/target
-/quick-start-test/target/.project
-/quick-start-test/target/.classpath
-/quick-start-test/target/.settings
+/spring-boot-api-server/target
+/spring-boot-api-server/.project
+/spring-boot-api-server/.classpath
+/spring-boot-api-server/.settings
+
+/spring-boot-api-services/target
+/spring-boot-api-services/.project
+/spring-boot-api-services/.classpath
+/spring-boot-api-servcies/.settings
+
+/spring-boot-api-test/target
+/spring-boot-api-test/.project
+/spring-boot-api-test/.classpath
+/spring-boot-api-test/.settings
 
 ### STS ###
 .apt_generated
