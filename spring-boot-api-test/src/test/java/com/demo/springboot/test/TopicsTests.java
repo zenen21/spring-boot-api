@@ -1,5 +1,6 @@
 package com.demo.springboot.test;
 
+import com.demo.springboot.topic.Topic;
 import com.jayway.restassured.RestAssured;
 import org.junit.Test;
 
@@ -9,8 +10,25 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class TopicsTests {
+
+    Logger logger = Logger.getLogger(TopicsTests.class.getName());
+
+    @Test
+    public void getAllTopics() {
+        logger.info(RestAssured.given()
+                .when()
+                .get("http://localhost:8080/topics").asString());
+    }
+
+    @Test
+    public void addTopic() {
+        Topic topic = new Topic("POST", "Test");
+        logger.info(RestAssured
+                .post("http://localhost:8080/topics", topic).asString());
+    }
 
     @Test
     public void createTopicFromJsonFile() {

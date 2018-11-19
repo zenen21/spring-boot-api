@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.demo.springboot.test.TopicsTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.102 s - in com.demo.springboot.test.TopicsTests
