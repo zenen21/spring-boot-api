@@ -24,7 +24,6 @@ public class TopicController {
 	@RequestMapping("/topics/{name}")
 	public Topic getTopic(@PathVariable String name) {
 		return topicService.getTopic(name);
-
 	}
 
 	@RequestMapping(method = RequestMethod.POST, value = "/topics")

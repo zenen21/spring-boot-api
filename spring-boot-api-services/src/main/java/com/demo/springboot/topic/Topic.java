@@ -1,5 +1,8 @@
 package com.demo.springboot.topic;
 
+/**
+ * Java model class for Topic
+ */
 public class Topic {
 
 	private String name;
