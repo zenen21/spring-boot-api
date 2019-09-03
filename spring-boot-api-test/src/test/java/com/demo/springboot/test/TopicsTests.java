@@ -3,7 +3,7 @@ package com.demo.springboot.test;
 import com.demo.springboot.topic.Topic;
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.http.ContentType;
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -14,20 +14,20 @@ import java.util.List;
 import java.util.logging.Logger;
 
 /**
- * Test class to validate TopicController
+ * This class implements methods to validate POST and GET endpoints.
  */
 public class TopicsTests {
 
     Logger logger = Logger.getLogger(TopicsTests.class.getName());
 
-    @Test
+    @Test(groups="GET")
     public void getAllTopics() {
         logger.info(RestAssured.given()
                 .when()
                 .get("http://localhost:8080/topics").asString());
     }
 
-    @Test
+    @Test(groups="POST")
     public void addTopic() {
         Topic topic = new Topic("POST", "Test");
         logger.info(RestAssured
@@ -41,13 +41,13 @@ public class TopicsTests {
 
     }
 
-    @Test
+    @Test(groups = "POST")
     public void createTopicFromJsonFile() {
         try {
             List<String> lines = Arrays.asList("{\r\n" + "\r\n" + "\"name\" : \"Spring boot\",\r\n" + "\r\n"
                     + "\"description\" : \"Quickstart 2\"\r\n" + "\r\n" + "}");
 
-            Path file = Files.write(Paths.get("json.txt"), lines);
+            Path file = Files.write(Paths.get("src\\test\\resources\\json.txt"), lines);
             RestAssured
                     .given()
                     //.body(file.toFile())
@@ -58,10 +58,11 @@ public class TopicsTests {
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
+            org.testng.Assert.fail("Error on Creating a Topic from JSON file.");
         }
     }
 
-    @Test
+    @Test(groups="GET")
     public void getPDFFile() {
         //TODO Create controller and service to receive PDF files
         /*Path file = null;

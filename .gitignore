@@ -4,6 +4,7 @@
 /spring-boot-api-server/.project
 /spring-boot-api-server/.classpath
 /spring-boot-api-server/.settings
+/spring-boot-api-server/.log
 
 /spring-boot-api-services/target
 /spring-boot-api-services/.project

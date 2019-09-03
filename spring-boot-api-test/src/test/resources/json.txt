@@ -2,6 +2,6 @@
 
 "name" : "Spring boot",
 
-"description" : "Quickstart"
+"description" : "Quickstart 2"
 
 }
