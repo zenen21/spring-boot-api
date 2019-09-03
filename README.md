@@ -6,10 +6,10 @@
 # Compile project
 
     - Add -DskipTests=false run all tests
-
     - mvn clean install
 
-# Star server
+# Start server
 
 Run the below command under under spring-boot-api-server
+
     - mvn spring-boot:run
