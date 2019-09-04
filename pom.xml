@@ -56,6 +56,13 @@
                     <skipTests>${skipTests}</skipTests>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.demo.springboot.CoursesApplication</mainClass>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
