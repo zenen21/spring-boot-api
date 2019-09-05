@@ -41,9 +41,9 @@
     </dependencies>
 
     <modules>
+        <module>spring-boot-api-services</module>
         <module>spring-boot-api-test</module>
         <module>spring-boot-api-server</module>
-        <module>spring-boot-api-services</module>
     </modules>
 
     <build>
