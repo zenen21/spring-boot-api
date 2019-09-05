@@ -17,7 +17,6 @@
     <properties>
         <skipTests>true</skipTests>
         <maven.surefire.plugin>3.0.0-M3</maven.surefire.plugin>
-        <start-class>com.demo.springboot.CoursesApplication</start-class>
     </properties>
 
     <dependencies>
